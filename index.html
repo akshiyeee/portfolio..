@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Akshith K Ajith: AI/ML engineer, playback singer and Flowers Top Singer Season 2 second runner-up.">
+<title>Akshith K Ajith</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+</head>
+<body>
+
+
+<canvas id="bgfx" aria-hidden="true"></canvas>
+<div class="cur" aria-hidden="true"></div><div class="cur-dot" aria-hidden="true"></div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top"><i id="logo-dot"></i>akshith</a>
+    <div class="nav-r">
+      <div class="links"><a href="#work">Work</a><a href="#stage">Stage</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+      <button class="theme" id="theme" aria-label="Switch light or dark theme"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 010 16z" fill="currentColor"/></svg></button>
+      <button class="sound" id="sound" aria-pressed="false"><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span id="sound-lbl">Sound off</span></button>
+    </div>
+  </div>
+  <div class="prog" aria-hidden="true"><i id="prog"></i></div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="status"><b></b>AI/ML engineer · Playback singer · Top Singer S2</span>
+      <h1 class="name" aria-label="Akshith K Ajith">
+        <span class="line" data-split="play">Akshith</span>
+        <span class="line"><span class="k" data-split="play">K</span> <span data-split="play">Ajith</span></span>
+      </h1>
+      <p class="role">I build <strong>AI that listens</strong> and the <strong>systems that keep models fast and online</strong>. Off the keyboard, I'm a <strong>playback singer</strong>.</p>
+      <div class="cta-row">
+        <a class="btn primary magnet" href="#work">See the work
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10m0 0l-4-4m4 4l4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <button class="btn magnet" data-sound-toggle>Turn the sound on ♪</button>
+      </div>
+    </div>
+    <div class="blob-stage" id="orb" aria-hidden="true">
+      <canvas id="blob"></canvas>
+      <span class="blob-note">touch it · drag to spin · tap to burst</span>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" id="marquee" aria-label="Tools I work with">
+  <div class="track" id="track">
+    <span>Python</span><span>FastAPI</span><span>LLM routing</span><span>Response caching</span><span>Provider failover</span><span>Claude API</span><span>OpenAI-compatible APIs</span><span>Voice interfaces</span><span>Playback singing</span><span>Top Singer Season 2</span><span>Live shows</span>
+    <span aria-hidden="true">Python</span><span aria-hidden="true">FastAPI</span><span aria-hidden="true">LLM routing</span><span aria-hidden="true">Response caching</span><span aria-hidden="true">Provider failover</span><span aria-hidden="true">Claude API</span><span aria-hidden="true">OpenAI-compatible APIs</span><span aria-hidden="true">Voice interfaces</span><span aria-hidden="true">Playback singing</span><span aria-hidden="true">Top Singer Season 2</span><span aria-hidden="true">Live shows</span>
+  </div>
+</div>
+
+<section class="loop" aria-labelledby="loop-h">
+  <div class="wrap loop-grid">
+    <div class="loop-copy">
+      <span class="eyebrow">Interlude · 100 BPM · A minor pentatonic</span>
+      <h2 id="loop-h" data-split="play">Write a loop</h2>
+      <p>This melody drives the whole page: the blob, the letters and the pulse under everything. Tap the grid to rewrite it.</p>
+      <div class="row">
+        <button class="btn primary sm magnet" data-sound-toggle>Turn the sound on ♪</button>
+        <button class="btn sm" id="shuffle">Shuffle</button>
+        <button class="btn sm" id="wipe">Clear</button>
+      </div>
+    </div>
+    <div class="seq-wrap">
+      <div class="seq" id="seq" aria-label="Step sequencer: 5 notes by 16 steps"></div>
+      <div class="seq-foot">
+        <div class="chords" id="chords"><span>Am</span><span>F</span><span>C</span><span>G</span></div>
+        <span class="bpm" id="bpm">bar 1 · step 01</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main>
+<section class="block" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 data-split="play">Selected work</h2>
+      <p>Two projects, both playable below. The demos run right here in the page.</p>
+    </div>
+
+    <article class="project">
+      <div class="p-info">
+        <div class="p-tag"><span class="chip">Personal assistant</span><span class="chip">Voice UI</span><span class="chip">Claude API</span></div>
+        <h3>AIRA<small>A voice-driven assistant that runs in the browser</small></h3>
+        <p>AIRA listens, matches what you said against a set of local skills, and answers instantly when it can. Anything it can't handle locally goes to Claude, if you've turned that on.</p>
+        <ul>
+          <li><span>Local skills for timers, quick maths and everyday commands, with no network round-trip</span></li>
+          <li><span>Optional Claude API brain for open-ended requests</span></li>
+          <li><span>Plain HTML app: open the file and talk to it</span></li>
+        </ul>
+        <a class="gh" data-repo="AIRA" href="#" hidden>github / AIRA →</a>
+      </div>
+      <div class="demo" id="aira">
+        <div class="demo-top"><div class="dots"><i></i><i></i><i></i></div><span class="sim">interactive demo</span></div>
+        <div class="orb">
+          <div class="mic" id="mic"><svg viewBox="0 0 24 24" fill="none"><rect x="9" y="3" width="6" height="11" rx="3" fill="#17141F"/><path d="M5 11a7 7 0 0014 0M12 18v3" stroke="#17141F" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <div class="wave" id="wave"></div>
+        </div>
+        <div class="chat" id="chat" data-lenis-prevent aria-live="polite">
+          <div class="msg aira"><span class="route">aira</span>Hi, I'm AIRA. Tap one of the requests below and I'll handle it.</div>
+        </div>
+        <div class="asks">
+          <button class="ask" data-q="timer">"Set a timer for 1 minute"</button>
+          <button class="ask" data-q="math">"What's 18% of 2,450?"</button>
+          <button class="ask" data-q="time">"What time is it?"</button>
+          <button class="ask" data-q="open">"Plan my Saturday"</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="p-info">
+        <div class="p-tag"><span class="chip">FastAPI</span><span class="chip">OpenAI-compatible</span><span class="chip">Infra</span></div>
+        <h3>LLM Gateway<small>One endpoint in front of every model provider</small></h3>
+        <p>Apps talk to a single OpenAI-compatible API. The gateway decides where each request goes, serves repeats from cache, and fails over when a provider stops responding.</p>
+        <ul>
+          <li><span>Drop-in <code>/v1/chat/completions</code> endpoint</span></li>
+          <li><span>Routing rules across providers and models</span></li>
+          <li><span>Response caching for repeated prompts</span></li>
+          <li><span>Automatic failover to a backup provider</span></li>
+        </ul>
+        <a class="gh" data-repo="LLM_Gateway" href="#" hidden>github / LLM_Gateway →</a>
+      </div>
+      <div class="demo" id="gw">
+        <div class="demo-top"><div class="dots"><i></i><i></i><i></i></div><span class="sim">simulated traffic</span></div>
+        <div class="flow">
+          <div class="node" id="n-app"><b>Your app</b><em>POST /v1/chat</em></div>
+          <div class="node" id="n-gw"><b>Gateway</b><em>FastAPI</em></div>
+          <div class="node" id="n-cache"><b>Cache</b><em id="cache-size">0 entries</em></div>
+          <div class="providers">
+            <div class="node" id="n-a"><b>Provider A</b><em>primary</em></div>
+            <div class="node" id="n-b"><b>Provider B</b><em>fallback</em></div>
+          </div>
+        </div>
+        <div class="controls">
+          <button class="btn primary sm" id="send">Send request</button>
+          <button class="btn sm" id="clear">Clear cache</button>
+          <label class="toggle" for="down"><input type="checkbox" id="down"> Provider A is down</label>
+        </div>
+        <div class="stats">
+          <div class="stat"><span>requests</span><b id="s-req">0</b></div>
+          <div class="stat"><span>cache hits</span><b id="s-hit">0</b></div>
+          <div class="stat"><span>failovers</span><b id="s-fo">0</b></div>
+        </div>
+        <div class="log" id="log" data-lenis-prevent aria-live="polite"><div class="l"><span class="ms">$</span> gateway ready on :8000. Send a request, then send it again.</div></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="block" id="stage" style="padding-top:0">
+  <div class="wrap">
+    <div class="stage" id="stage-card">
+      <div class="beams" aria-hidden="true"><span class="beam"></span><span class="beam"></span><span class="beam"></span></div>
+      <div class="ticker" aria-hidden="true"><div><span>Top Singer Season 2 ✦ Playback singer ✦ Live on stage ✦</span><span>Top Singer Season 2 ✦ Playback singer ✦ Live on stage ✦</span></div></div>
+      <canvas class="confetti" id="confetti" aria-hidden="true"></canvas>
+      <span class="claps" aria-live="polite"><b id="claps-n">0</b> rounds of applause</span>
+      <div class="stage-grid">
+        <div class="stage-copy" style="max-width:none">
+          <span class="eyebrow">Playback singer · Flowers Top Singer Season 2</span>
+          <h2><span data-split="play">On</span> <span data-split="play" data-hl>stage.</span></h2>
+          <p style="max-width:46ch">I'm a <b>playback singer</b> and the <b>second runner-up of Flowers Top Singer Season 2</b>. When I'm not building AI or shipping code, I'm behind a mic, and the live stage is where I'm happiest.</p>
+          <div class="stage-acts">
+            <button class="sing" id="sing" aria-describedby="sing-hint"><svg viewBox="0 0 24 24" fill="none"><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor"/><path d="M5 11a7 7 0 0014 0M12 18v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Hold to sing</button>
+            <a class="btn magnet" href="https://www.youtube.com/results?search_query=Akshith+K+Ajith+Flowers+Top+Singer+Season+2" target="_blank" rel="noopener">Listen on YouTube ↗</a>
+          </div>
+          <p class="sing-hint" id="sing-hint">Hold the mic and slide sideways to change the note.</p>
+        </div>
+        <button class="award" id="award" aria-label="Flowers Top Singer Season 2, second runner-up. Tap for applause.">
+          <span class="card3d">
+            <span class="glare"></span>
+            <svg class="laurel" viewBox="0 0 150 60" fill="currentColor" aria-hidden="true"><g><ellipse cx="30.0" cy="12.0" rx="7" ry="3.2" transform="rotate(-50 30.0 12.0)"/><ellipse cx="26.8" cy="18.5" rx="7" ry="3.2" transform="rotate(-36 26.8 18.5)"/><ellipse cx="23.6" cy="25.0" rx="7" ry="3.2" transform="rotate(-22 23.6 25.0)"/><ellipse cx="20.4" cy="31.5" rx="7" ry="3.2" transform="rotate(-8 20.4 31.5)"/><ellipse cx="17.2" cy="38.0" rx="7" ry="3.2" transform="rotate(6 17.2 38.0)"/><ellipse cx="14.0" cy="44.5" rx="7" ry="3.2" transform="rotate(20 14.0 44.5)"/><ellipse cx="10.8" cy="51.0" rx="7" ry="3.2" transform="rotate(34 10.8 51.0)"/><ellipse cx="120.0" cy="12.0" rx="7" ry="3.2" transform="rotate(50 120.0 12.0)"/><ellipse cx="123.2" cy="18.5" rx="7" ry="3.2" transform="rotate(36 123.2 18.5)"/><ellipse cx="126.4" cy="25.0" rx="7" ry="3.2" transform="rotate(22 126.4 25.0)"/><ellipse cx="129.6" cy="31.5" rx="7" ry="3.2" transform="rotate(8 129.6 31.5)"/><ellipse cx="132.8" cy="38.0" rx="7" ry="3.2" transform="rotate(-6 132.8 38.0)"/><ellipse cx="136.0" cy="44.5" rx="7" ry="3.2" transform="rotate(-20 136.0 44.5)"/><ellipse cx="139.2" cy="51.0" rx="7" ry="3.2" transform="rotate(-34 139.2 51.0)"/><path d="M75 8l4.2 8.6 9.5 1.4-6.9 6.7 1.6 9.4L75 29.7l-8.4 4.4 1.6-9.4-6.9-6.7 9.5-1.4z"/></g></svg>
+            <small>Flowers Top Singer</small>
+            <strong>2nd Runner-up</strong>
+            <span class="season">SEASON 2</span>
+            <span class="tapnote">tap for applause</span>
+          </span>
+        </button>
+      </div>
+      <div class="fan" aria-label="Concert photos"><button class="shot" style="--r:-9deg;--y:34px" aria-label="Open photo 1: Akshith smiling at the mic in a traditional mundu"><img src="images/p1.jpg" alt="Akshith smiling at the mic in a traditional mundu" loading="lazy" decoding="async"></button><button class="shot" style="--r:-4.5deg;--y:10px" aria-label="Open photo 2: Akshith singing on stage under purple lights"><img src="images/p2.jpg" alt="Akshith singing on stage under purple lights" loading="lazy" decoding="async"></button><button class="shot" style="--r:0deg;--y:0px" aria-label="Open photo 3: Akshith performing under warm stage lights"><img src="images/p5.jpg" alt="Akshith performing under warm stage lights" loading="lazy" decoding="async"></button><button class="shot" style="--r:4.5deg;--y:10px" aria-label="Open photo 4: Close-up of Akshith singing, eyes closed"><img src="images/p4.jpg" alt="Close-up of Akshith singing, eyes closed" loading="lazy" decoding="async"></button><button class="shot" style="--r:9deg;--y:34px" aria-label="Open photo 5: Akshith singing on stage, black and white"><img src="images/p3.jpg" alt="Akshith singing on stage, black and white" loading="lazy" decoding="async"></button></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="about" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 data-split="play">About me</h2>
+      <p>Ask me something, or play the keys. On a keyboard, A S D F G H J work too.</p>
+    </div>
+    <div class="about-grid">
+      <div class="console" id="console">
+        <div class="console-top"><span>ask-akshith</span><span class="typing" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="answers" id="answers" data-lenis-prevent aria-live="polite"></div>
+        <div class="qs" id="qs">
+          <button data-a="who">Who are you?</button>
+          <button data-a="build">What do you build?</button>
+          <button data-a="stack">What's your stack?</button>
+          <button data-a="care">What do you care about?</button>
+          <button data-a="sing">Do you really sing?</button>
+          <button data-a="reach">How do I reach you?</button>
+        </div>
+      </div>
+      <div class="about-r">
+        <div class="facts" id="facts">
+          <button class="fact" aria-pressed="false"><span class="in"><span class="fr"><b>18</b><span>years old</span></span><span class="bk"><small>age</small>Old enough to ship, young enough to keep shipping.</span></span></button>
+          <button class="fact" aria-pressed="false"><span class="in"><span class="fr"><b>2</b><span>public projects</span></span><span class="bk"><small>on GitHub</small>AIRA and LLM Gateway, both playable above.</span></span></button>
+          <button class="fact" aria-pressed="false"><span class="in"><span class="fr"><b>IN</b><span>based in India</span></span><span class="bk"><small>time zone</small>India Standard Time, UTC+5:30.</span></span></button>
+          <button class="fact" aria-pressed="false"><span class="in"><span class="fr"><b>♪</b><span>playback singer</span></span><span class="bk"><small>on stage</small>Playback singer and Flowers Top Singer Season 2 second runner-up.</span></span></button>
+        </div>
+        <div class="keys-card">
+          <div class="keys-head"><h3>My toolkit, in keys</h3><span class="eyebrow">press one</span></div>
+          <div class="keys" id="keys"></div>
+          <p class="key-note" id="key-note"><b>Python</b>: my default language for backends, tooling and glue code.</p>
+        </div>
+        <div class="reach">
+          <div class="card">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="3" stroke="currentColor" stroke-width="2"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+            <div class="v"><span>Gmail</span><code>akshithkajith@gmail.com</code></div>
+            <div class="acts"><button class="mini" data-copy="akshithkajith@gmail.com" data-toast="t-about">Copy</button><a class="mini" href="mailto:akshithkajith@gmail.com">Email</a></div>
+          </div>
+          <div class="card">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M6.5 3h3l1.5 4.5-2 1.5a11 11 0 005 5l1.5-2L20 13.5v3A2.5 2.5 0 0117.5 19 14.5 14.5 0 014 5.5 2.5 2.5 0 016.5 3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+            <div class="v"><span>Mobile</span><code>+91 79026 01331</code></div>
+            <div class="acts"><button class="mini" data-copy="+917902601331" data-toast="t-about">Copy</button><a class="mini" href="tel:+917902601331">Call</a><a class="mini" href="https://wa.me/917902601331" target="_blank" rel="noopener">WhatsApp</a></div>
+          </div>
+          <div class="card">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="2" stroke-dasharray="3 3"/></svg></span>
+            <div class="v"><span>Socials</span><code>@akshithkajith</code></div>
+            <div class="acts"><a class="mini" href="https://instagram.com/akshithkajith" target="_blank" rel="noopener">Instagram</a><a class="mini" href="https://x.com/akshithkajith" target="_blank" rel="noopener">X</a><a class="mini" href="https://youtube.com/@akshithkajith" target="_blank" rel="noopener">YouTube</a></div>
+          </div>
+          <p class="toast" id="t-about" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="contact" id="contact-card">
+      <span class="eyebrow">Contact</span>
+      <h2><span data-split="play">Let's build</span><br><span data-split="play">something</span> <span data-split="play" data-hl>smooth.</span></h2>
+      <div class="lines">
+        <div class="ln"><code>akshithkajith@gmail.com</code><button class="mini" data-copy="akshithkajith@gmail.com" data-toast="t-contact">Copy</button><a class="mini" href="mailto:akshithkajith@gmail.com">Email</a></div>
+        <div class="ln"><code>+91 79026 01331</code><button class="mini" data-copy="+917902601331" data-toast="t-contact">Copy</button><a class="mini" href="https://wa.me/917902601331" target="_blank" rel="noopener">WhatsApp</a></div>
+      </div>
+      <div class="socials"><a class="soc magnet" href="https://instagram.com/akshithkajith" target="_blank" rel="noopener" data-n="0"><span class="top"><b>Instagram</b><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>@akshithkajith</span></a><a class="soc magnet" href="https://x.com/akshithkajith" target="_blank" rel="noopener" data-n="1"><span class="top"><b>X</b><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>@akshithkajith</span></a><a class="soc magnet" href="https://youtube.com/@akshithkajith" target="_blank" rel="noopener" data-n="2"><span class="top"><b>YouTube</b><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>@akshithkajith</span></a></div>
+      <p class="toast" id="t-contact" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Concert photos">
+  <button class="lb-btn lb-prev" id="lb-prev" aria-label="Previous photo">←</button>
+  <img id="lb-img" alt="">
+  <button class="lb-btn lb-next" id="lb-next" aria-label="Next photo">→</button>
+  <button class="lb-btn lb-close" id="lb-close" aria-label="Close">✕</button>
+  <span class="lb-count" id="lb-count"></span>
+</div>
+
+<footer><div class="wrap"><span>© 2026 Akshith K Ajith</span><span>Scored at 100 BPM in A minor. Click any empty space to play a note.</span></div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
